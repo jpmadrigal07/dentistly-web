@@ -7,8 +7,8 @@ import Image from "next/image"
 
 export default function AboutPage() {
   const stats = [
-    { number: "500+", label: "Dental Clinics" },
-    { number: "50K+", label: "Patients Managed" },
+    { number: "500+", label: "Dental clinics" },
+    { number: "50K+", label: "Patients managed" },
     { number: "99.9%", label: "Uptime" },
     { number: "24/7", label: "Support" },
   ]
@@ -31,22 +31,22 @@ export default function AboutPage() {
   const values = [
     {
       icon: Heart,
-      title: "Patient-Centered",
+      title: "Patient-centered",
       description: "Everything we build is designed to improve patient care and experience.",
     },
     {
       icon: Shield,
-      title: "Security First",
+      title: "Security first",
       description: "HIPAA compliance and data security are built into every feature we create.",
     },
     {
       icon: Users,
-      title: "Dental Expertise",
+      title: "Dental expertise",
       description: "Our team includes practicing dentists who understand your daily challenges.",
     },
     {
       icon: TrendingUp,
-      title: "Continuous Innovation",
+      title: "Continuous innovation",
       description: "We're constantly improving our platform based on user feedback and industry trends.",
     },
   ]
@@ -67,7 +67,7 @@ export default function AboutPage() {
             <Link href="/pricing" className="text-sm font-medium text-gray-600 hover:text-lime-600 transition-colors">
               Pricing
             </Link>
-            <Link href="/about" className="text-sm font-medium text-lime-600 font-semibold">
+            <Link href="/about" className="text-sm font-medium text-lime-600">
               About
             </Link>
             <Link href="/contact" className="text-sm font-medium text-gray-600 hover:text-lime-600 transition-colors">
@@ -109,7 +109,7 @@ export default function AboutPage() {
 
         {/* Stats Section */}
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container max-w-7xl mx-auto">
+          <div className="container max-w-7xl mx-auto px-4 lg:px-0">
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {stats.map((stat, index) => (
                 <Card key={index} className="border-0 shadow-lg text-center">
@@ -125,7 +125,7 @@ export default function AboutPage() {
 
         {/* Mission Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-stone-50">
-          <div className="container max-w-7xl mx-auto">
+          <div className="container max-w-7xl mx-auto px-4 lg:px-0">
             <div className="grid items-center gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
@@ -184,7 +184,7 @@ export default function AboutPage() {
 
         {/* Values Section */}
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container max-w-7xl mx-auto">
+          <div className="container max-w-7xl mx-auto px-4 lg:px-0">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">Our Values</div>
@@ -211,7 +211,7 @@ export default function AboutPage() {
 
         {/* Team Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-stone-50">
-          <div className="container max-w-7xl mx-auto">
+          <div className="container max-w-7xl mx-auto px-4 lg:px-0">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">Meet Our Team</div>
@@ -224,7 +224,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="grid gap-6 grid-cols-2 max-w-2xl mx-auto">
+            <div className="grid gap-6 md:grid-cols-2 max-w-2xl mx-auto">
               {team.map((member, index) => (
                 <Card key={index} className="border-0 shadow-lg">
                   <CardContent className="p-6 text-center">

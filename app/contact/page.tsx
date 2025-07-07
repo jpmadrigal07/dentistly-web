@@ -10,24 +10,24 @@ export default function ContactPage() {
   const contactMethods = [
     {
       icon: Mail,
-      title: "Email Support",
+      title: "Email support",
       description: "Get help via email within 24 hours",
       contact: "support@dentistly.com",
-      action: "Send Email",
+      action: "Send email",
     },
     {
       icon: Phone,
-      title: "Phone Support",
+      title: "Phone support",
       description: "Speak with our support team",
       contact: "1-800-DENTIST",
-      action: "Call Now",
+      action: "Call now",
     },
     {
       icon: MessageSquare,
-      title: "Live Chat",
+      title: "Live chat",
       description: "Chat with us in real-time",
       contact: "Available 9 AM - 6 PM EST",
-      action: "Start Chat",
+      action: "Start chat",
     },
   ]
 
@@ -59,7 +59,7 @@ export default function ContactPage() {
             <Link href="/about" className="text-sm font-medium text-gray-600 hover:text-lime-600 transition-colors">
               About
             </Link>
-            <Link href="/contact" className="text-sm font-medium text-lime-600 font-semibold">
+            <Link href="/contact" className="text-sm font-medium text-lime-600">
               Contact
             </Link>
           </nav>
@@ -80,7 +80,7 @@ export default function ContactPage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-lime-50 to-stone-100">
-          <div className="container max-w-7xl mx-auto px-4 md:px-6">
+          <div className="container max-w-7xl mx-auto px-4 lg:px-0">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">Get in Touch</div>
@@ -98,7 +98,7 @@ export default function ContactPage() {
 
         {/* Contact Methods */}
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container max-w-7xl mx-auto px-4 md:px-6">
+          <div className="container max-w-7xl mx-auto px-4 lg:px-0">
             <div className="grid gap-6 md:grid-cols-3">
               {contactMethods.map((method, index) => (
                 <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center">
@@ -119,7 +119,7 @@ export default function ContactPage() {
 
         {/* Contact Form */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-stone-50">
-          <div className="container max-w-7xl mx-auto px-4 md:px-6">
+          <div className="container max-w-7xl mx-auto px-4 lg:px-0">
             <div className="grid items-start gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
@@ -187,7 +187,7 @@ export default function ContactPage() {
                     <Textarea id="message" placeholder="Tell us more about your needs..." className="min-h-[120px]" />
                   </div>
                   <Button className="w-full bg-lime-500 hover:bg-lime-600 text-white">
-                    Send Message
+                    Send message
                     <Send className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
@@ -198,7 +198,7 @@ export default function ContactPage() {
 
         {/* Office Locations */}
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container max-w-7xl mx-auto px-4 md:px-6">
+          <div className="container max-w-7xl mx-auto px-4 lg:px-0">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">Our Offices</div>
@@ -233,7 +233,7 @@ export default function ContactPage() {
 
         {/* CTA Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-lime-500">
-          <div className="container max-w-7xl mx-auto px-4 md:px-6">
+          <div className="container max-w-7xl mx-auto px-4 lg:px-0">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white volkhov-regular">Ready to get started?</h2>

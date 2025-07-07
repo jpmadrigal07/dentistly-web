@@ -59,7 +59,7 @@ export default function LandingPage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-lime-50 to-stone-100">
-          <div className="container max-w-7xl mx-auto">
+          <div className="container max-w-7xl mx-auto px-4 lg:px-0">
             <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_600px] items-center">
               <div className="flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
@@ -109,7 +109,7 @@ export default function LandingPage() {
 
         {/* Features Section */}
         <section id="features" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container max-w-7xl mx-auto">
+          <div className="container max-w-7xl mx-auto px-4 lg:px-0">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
@@ -198,7 +198,7 @@ export default function LandingPage() {
 
         {/* Benefits Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-stone-50">
-          <div className="container max-w-7xl mx-auto">
+          <div className="container max-w-7xl mx-auto px-4 lg:px-0">
             <div className="grid items-center gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">

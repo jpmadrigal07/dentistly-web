@@ -116,7 +116,7 @@ export default function PricingPage() {
             <Link href="/#features" className="text-sm font-medium text-gray-600 hover:text-lime-600 transition-colors">
               Features
             </Link>
-            <Link href="/pricing" className="text-sm font-medium text-lime-600 font-semibold">
+            <Link href="/pricing" className="text-sm font-medium text-lime-600">
               Pricing
             </Link>
             <Link href="/about" className="text-sm font-medium text-gray-600 hover:text-lime-600 transition-colors">
@@ -230,7 +230,7 @@ export default function PricingPage() {
 
         {/* Features Comparison */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-stone-50">
-          <div className="container max-w-7xl mx-auto">
+          <div className="container max-w-7xl mx-auto px-4 lg:px-0">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
