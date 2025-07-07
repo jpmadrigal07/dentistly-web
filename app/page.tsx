@@ -44,9 +44,9 @@ export default function LandingPage() {
           </nav>
           <div className="ml-6 hidden md:flex gap-2">
             <Button variant="ghost" size="sm">
-              Sign In
+              Sign in
             </Button>
-            <Button size="sm" className="bg-lime-500 hover:bg-lime-600">
+            <Button size="sm" className="bg-lime-500 hover:bg-lime-600 volkhov-regular">
               Start Free Trial
             </Button>
           </div>
@@ -59,15 +59,15 @@ export default function LandingPage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-lime-50 to-stone-100">
-          <div className="container max-w-7xl mx-auto px-4 md:px-6">
+          <div className="container max-w-7xl mx-auto">
             <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_600px] items-center">
               <div className="flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
                   <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
-                    Trusted by 500+ Dental Clinics
+                    Trusted by 500+ Dental clinics
                   </div>
-                  <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-gray-900">
-                    Streamline Your Dental Practice with <span className="text-lime-600">Dentistly</span>
+                  <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-gray-900 volkhov-regular">
+                    Streamline your dental practice with <span className="text-lime-600 font-bold">Dentistly</span>
                   </h1>
                   <p className="max-w-[600px] text-gray-600 md:text-xl">
                     The complete SaaS solution for managing your dental clinic. Handle appointments, patients,
@@ -80,7 +80,7 @@ export default function LandingPage() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                   <Button variant="outline" size="lg">
-                    Watch Demo
+                    Watch demo
                   </Button>
                 </div>
                 <div className="flex items-center gap-4 text-sm text-gray-600">
@@ -109,26 +109,26 @@ export default function LandingPage() {
 
         {/* Features Section */}
         <section id="features" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container max-w-7xl mx-auto px-4 md:px-6">
+          <div className="container max-w-7xl mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
                   Powerful Features
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900">
-                  Everything You Need to Run Your Dental Practice
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 volkhov-regular">
+                  Everything you need to run your Dental Practice
                 </h2>
-                <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  From appointment scheduling to patient management, Dentistly provides all the tools you need to
+                <p className=" text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  From appointment scheduling to patient management, <span className="font-bold">Dentistly</span> provides all the tools you need to
                   operate efficiently.
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-start gap-6 py-12 lg:grid-cols-3 lg:gap-8">
+            <div className="mx-auto grid max-w-7xl items-start gap-6 py-12 lg:grid-cols-3 lg:gap-8">
               <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
                 <CardContent className="flex flex-col items-center space-y-4 p-6">
-                  <div className="rounded-full bg-lime-100 p-3">
-                    <Calendar className="h-8 w-8 text-lime-600" />
+                  <div className="rounded-full bg-sky-100 p-3">
+                    <Calendar className="h-8 w-8 text-sky-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">Appointment Management</h3>
                   <p className="text-center text-gray-600">
@@ -139,8 +139,8 @@ export default function LandingPage() {
               </Card>
               <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
                 <CardContent className="flex flex-col items-center space-y-4 p-6">
-                  <div className="rounded-full bg-emerald-100 p-3">
-                    <Users className="h-8 w-8 text-emerald-600" />
+                  <div className="rounded-full bg-sky-100 p-3">
+                    <Users className="h-8 w-8 text-sky-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">Patient Records</h3>
                   <p className="text-center text-gray-600">
@@ -161,8 +161,8 @@ export default function LandingPage() {
               </Card>
               <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
                 <CardContent className="flex flex-col items-center space-y-4 p-6">
-                  <div className="rounded-full bg-amber-100 p-3">
-                    <Stethoscope className="h-8 w-8 text-amber-600" />
+                  <div className="rounded-full bg-sky-100 p-3">
+                    <Stethoscope className="h-8 w-8 text-sky-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">Procedure Tracking</h3>
                   <p className="text-center text-gray-600">
@@ -172,8 +172,8 @@ export default function LandingPage() {
               </Card>
               <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
                 <CardContent className="flex flex-col items-center space-y-4 p-6">
-                  <div className="rounded-full bg-rose-100 p-3">
-                    <UserPlus className="h-8 w-8 text-rose-600" />
+                  <div className="rounded-full bg-sky-100 p-3">
+                    <UserPlus className="h-8 w-8 text-sky-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">Team Management</h3>
                   <p className="text-center text-gray-600">
@@ -183,8 +183,8 @@ export default function LandingPage() {
               </Card>
               <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
                 <CardContent className="flex flex-col items-center space-y-4 p-6">
-                  <div className="rounded-full bg-indigo-100 p-3">
-                    <BarChart3 className="h-8 w-8 text-indigo-600" />
+                  <div className="rounded-full bg-sky-100 p-3">
+                    <BarChart3 className="h-8 w-8 text-sky-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">Analytics & Reports</h3>
                   <p className="text-center text-gray-600">
@@ -198,15 +198,15 @@ export default function LandingPage() {
 
         {/* Benefits Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-stone-50">
-          <div className="container max-w-7xl mx-auto px-4 md:px-6">
+          <div className="container max-w-7xl mx-auto">
             <div className="grid items-center gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
-                    Why Choose Dentistly
+                    Why choose Dentistly
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900">
-                    Built Specifically for Dental Professionals
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 volkhov-regular">
+                    Built specifically for Dental Professionals
                   </h2>
                   <p className="max-w-[600px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     We understand the unique challenges of running a dental practice. Our platform is designed with
@@ -215,25 +215,25 @@ export default function LandingPage() {
                 </div>
                 <ul className="grid gap-4 py-4">
                   <li className="flex items-start gap-3">
-                    <Shield className="h-5 w-5 text-lime-600 mt-0.5 flex-shrink-0" />
+                    <Shield className="h-5 w-5 text-sky-600 mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-gray-900">HIPAA Compliant</h4>
+                      <h4 className="font-semibold text-gray-900">HIPAA compliant</h4>
                       <p className="text-gray-600">
                         Your patient data is secure and compliant with healthcare regulations.
                       </p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Clock className="h-5 w-5 text-lime-600 mt-0.5 flex-shrink-0" />
+                    <Clock className="h-5 w-5 text-sky-600 mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-gray-900">Save Time Daily</h4>
+                      <h4 className="font-semibold text-gray-900">Save time daily</h4>
                       <p className="text-gray-600">Automate routine tasks and focus more on patient care.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <BarChart3 className="h-5 w-5 text-lime-600 mt-0.5 flex-shrink-0" />
+                    <BarChart3 className="h-5 w-5 text-sky-600 mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-gray-900">Increase Revenue</h4>
+                      <h4 className="font-semibold text-gray-900">Increase revenue</h4>
                       <p className="text-gray-600">
                         Reduce no-shows and optimize scheduling to maximize your practice revenue.
                       </p>
@@ -260,7 +260,7 @@ export default function LandingPage() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">Testimonials</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 volkhov-regular">
                   Loved by Dental Professionals
                 </h2>
               </div>
@@ -278,8 +278,8 @@ export default function LandingPage() {
                     hours each week."
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-lime-100 flex items-center justify-center">
-                      <span className="text-lime-600 font-semibold">DR</span>
+                    <div className="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center">
+                      <span className="text-sky-600 font-semibold">DR</span>
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900">Dr. Sarah Johnson</p>
@@ -299,8 +299,8 @@ export default function LandingPage() {
                     "The patient management system is incredible. We can access complete treatment histories instantly."
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center">
-                      <span className="text-emerald-600 font-semibold">DM</span>
+                    <div className="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center">
+                      <span className="text-sky-600 font-semibold">DM</span>
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900">Dr. Michael Chen</p>
@@ -340,11 +340,11 @@ export default function LandingPage() {
           <div className="container max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">
-                  Ready to Transform Your Dental Practice?
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white volkhov-regular">
+                  Ready to transform your Dental Practice?
                 </h2>
                 <p className="mx-auto max-w-[600px] text-lime-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Join hundreds of dental professionals who trust Dentistly to manage their practice efficiently.
+                  Join hundreds of dental professionals who trust <span className="font-bold">Dentistly</span> to manage their practice efficiently.
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">

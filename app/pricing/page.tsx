@@ -8,11 +8,11 @@ export default function PricingPage() {
   const plans = [
     {
       name: "Starter",
-      price: 49,
+      price: 159,
       description: "Perfect for small dental practices just getting started",
       badge: null,
       features: [
-        { name: "Up to 500 patients", included: true },
+        { name: "Up to 30 patients", included: true },
         { name: "2 staff users", included: true },
         { name: "Appointment scheduling", included: true },
         { name: "Basic patient records", included: true },
@@ -30,11 +30,11 @@ export default function PricingPage() {
     },
     {
       name: "Professional",
-      price: 99,
+      price: 249,
       description: "Ideal for growing practices with multiple staff members",
       badge: "Most Popular",
       features: [
-        { name: "Up to 2,000 patients", included: true },
+        { name: "Up to 70 patients", included: true },
         { name: "10 staff users", included: true },
         { name: "Advanced scheduling", included: true },
         { name: "Complete patient records", included: true },
@@ -52,7 +52,7 @@ export default function PricingPage() {
     },
     {
       name: "Enterprise",
-      price: 199,
+      price: 499,
       description: "For large practices and multi-location dental groups",
       badge: "Best Value",
       features: [
@@ -130,7 +130,7 @@ export default function PricingPage() {
             <Button variant="ghost" size="sm">
               Sign In
             </Button>
-            <Button size="sm" className="bg-lime-500 hover:bg-lime-600">
+            <Button size="sm" className="bg-lime-500 hover:bg-lime-600 volkhov-regular">
               Start Free Trial
             </Button>
           </div>
@@ -146,8 +146,8 @@ export default function PricingPage() {
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
                   Simple, Transparent Pricing
                 </div>
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-gray-900">
-                  Choose the Perfect Plan for Your <span className="text-lime-600">Dental Practice</span>
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-gray-900 volkhov-regular">
+                  Choose the perfect plan for your <span className="text-lime-600 font-bold">Dental Practice</span>
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Start with our 14-day free trial. No setup fees, no long-term contracts. Scale as your practice grows.
@@ -188,9 +188,9 @@ export default function PricingPage() {
                     </div>
                   )}
                   <CardHeader className="text-center pb-8 pt-6">
-                    <h3 className="text-2xl font-bold text-gray-900">{plan.name}</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 volkhov-regular">{plan.name}</h3>
                     <div className="mt-4">
-                      <span className="text-4xl font-bold text-gray-900">${plan.price}</span>
+                      <span className="text-4xl font-bold text-gray-900">₱{plan.price}</span>
                       <span className="text-gray-600">/month</span>
                     </div>
                     <p className="text-gray-600 mt-2">{plan.description}</p>
@@ -230,13 +230,13 @@ export default function PricingPage() {
 
         {/* Features Comparison */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-stone-50">
-          <div className="container max-w-7xl mx-auto px-4 md:px-6">
+          <div className="container max-w-7xl mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
                   Why Choose Dentistly
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 volkhov-regular">
                   Everything You Need, Nothing You Don't
                 </h2>
               </div>
@@ -244,8 +244,8 @@ export default function PricingPage() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               <Card className="border-0 shadow-lg text-center">
                 <CardContent className="p-6">
-                  <div className="rounded-full bg-lime-100 p-3 w-fit mx-auto mb-4">
-                    <Shield className="h-6 w-6 text-lime-600" />
+                  <div className="rounded-full bg-sky-100 p-3 w-fit mx-auto mb-4">
+                    <Shield className="h-6 w-6 text-sky-600" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">HIPAA Compliant</h3>
                   <p className="text-sm text-gray-600">Enterprise-grade security for all patient data</p>
@@ -253,8 +253,8 @@ export default function PricingPage() {
               </Card>
               <Card className="border-0 shadow-lg text-center">
                 <CardContent className="p-6">
-                  <div className="rounded-full bg-emerald-100 p-3 w-fit mx-auto mb-4">
-                    <Zap className="h-6 w-6 text-emerald-600" />
+                  <div className="rounded-full bg-sky-100 p-3 w-fit mx-auto mb-4">
+                    <Zap className="h-6 w-6 text-sky-600" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">Quick Setup</h3>
                   <p className="text-sm text-gray-600">Get started in minutes, not weeks</p>
@@ -271,8 +271,8 @@ export default function PricingPage() {
               </Card>
               <Card className="border-0 shadow-lg text-center">
                 <CardContent className="p-6">
-                  <div className="rounded-full bg-amber-100 p-3 w-fit mx-auto mb-4">
-                    <Star className="h-6 w-6 text-amber-600" />
+                  <div className="rounded-full bg-sky-100 p-3 w-fit mx-auto mb-4">
+                    <Star className="h-6 w-6 text-sky-600" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">Proven Results</h3>
                   <p className="text-sm text-gray-600">Trusted by 500+ dental practices</p>
@@ -288,10 +288,10 @@ export default function PricingPage() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
-                  Frequently Asked Questions
+                  Frequently asked questions
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900">
-                  Got Questions? We've Got Answers
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 volkhov-regular">
+                  Got questions? We've got answers
                 </h2>
               </div>
             </div>
@@ -313,7 +313,7 @@ export default function PricingPage() {
           <div className="container max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">Ready to Get Started?</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white volkhov-regular">Ready to get started?</h2>
                 <p className="mx-auto max-w-[600px] text-lime-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Join hundreds of dental professionals who trust Dentistly. Start your free trial today.
                 </p>
@@ -328,7 +328,7 @@ export default function PricingPage() {
                   variant="outline"
                   className="border-white text-white hover:bg-white hover:text-lime-600 bg-transparent"
                 >
-                  Schedule Demo
+                  Schedule demo
                 </Button>
               </div>
               <p className="text-xs text-lime-100">14-day free trial • No credit card required • Cancel anytime</p>

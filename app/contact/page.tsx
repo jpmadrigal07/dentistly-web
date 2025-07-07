@@ -33,22 +33,10 @@ export default function ContactPage() {
 
   const offices = [
     {
-      city: "San Francisco",
+      city: "Paete",
       address: "123 Market Street, Suite 400",
-      zipcode: "San Francisco, CA 94105",
-      phone: "(415) 555-0123",
-    },
-    {
-      city: "New York",
-      address: "456 Broadway, Floor 12",
-      zipcode: "New York, NY 10013",
-      phone: "(212) 555-0456",
-    },
-    {
-      city: "Austin",
-      address: "789 Congress Ave, Suite 200",
-      zipcode: "Austin, TX 78701",
-      phone: "(512) 555-0789",
+      zipcode: "4016",
+      phone: "+63 123 456 4898",
     },
   ]
 
@@ -77,9 +65,9 @@ export default function ContactPage() {
           </nav>
           <div className="ml-6 hidden md:flex gap-2">
             <Button variant="ghost" size="sm">
-              Sign In
+              Sign in
             </Button>
-            <Button size="sm" className="bg-lime-500 hover:bg-lime-600">
+            <Button size="sm" className="bg-lime-500 hover:bg-lime-600 volkhov-regular font-bold">
               Start Free Trial
             </Button>
           </div>
@@ -96,7 +84,7 @@ export default function ContactPage() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">Get in Touch</div>
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-gray-900">
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-gray-900 volkhov-regular">
                   We're Here to <span className="text-lime-600">Help</span>
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -115,8 +103,8 @@ export default function ContactPage() {
               {contactMethods.map((method, index) => (
                 <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center">
                   <CardContent className="p-6">
-                    <div className="rounded-full bg-lime-100 p-3 w-fit mx-auto mb-4">
-                      <method.icon className="h-6 w-6 text-lime-600" />
+                    <div className="rounded-full bg-sky-100 p-3 w-fit mx-auto mb-4">
+                      <method.icon className="h-6 w-6 text-sky-600" />
                     </div>
                     <h3 className="font-semibold text-gray-900 mb-2">{method.title}</h3>
                     <p className="text-sm text-gray-600 mb-3">{method.description}</p>
@@ -138,8 +126,8 @@ export default function ContactPage() {
                   <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
                     Send us a Message
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900">
-                    Let's Start a Conversation
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 volkhov-regular">
+                    Let's start a conversation
                   </h2>
                   <p className="max-w-[600px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     Fill out the form and we'll get back to you within 24 hours. For urgent matters, please call our
@@ -148,16 +136,16 @@ export default function ContactPage() {
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <Clock className="h-5 w-5 text-lime-600 mt-0.5 flex-shrink-0" />
+                    <Clock className="h-5 w-5 text-sky-600 mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-gray-900">Response Time</h4>
+                      <h4 className="font-semibold text-gray-900">Response time</h4>
                       <p className="text-gray-600">We typically respond within 2-4 hours during business hours.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Headphones className="h-5 w-5 text-lime-600 mt-0.5 flex-shrink-0" />
+                    <Headphones className="h-5 w-5 text-sky-600 mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-gray-900">Expert Support</h4>
+                      <h4 className="font-semibold text-gray-900">Expert support</h4>
                       <p className="text-gray-600">Our team includes dental professionals who understand your needs.</p>
                     </div>
                   </div>
@@ -165,7 +153,7 @@ export default function ContactPage() {
               </div>
               <Card className="border-0 shadow-lg lg:order-last">
                 <CardHeader>
-                  <h3 className="text-xl font-semibold text-gray-900">Contact Form</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 volkhov-regular">Contact Form</h3>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid gap-4 md:grid-cols-2">
@@ -214,25 +202,25 @@ export default function ContactPage() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">Our Offices</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900">Visit Us in Person</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 volkhov-regular">Visit us in person</h2>
                 <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   We have offices across the country to better serve our dental practice customers.
                 </p>
               </div>
             </div>
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-6 grid-cols-1 max-w-xl mx-auto">
               {offices.map((office, index) => (
                 <Card key={index} className="border-0 shadow-lg">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-2 mb-4">
-                      <MapPin className="h-5 w-5 text-lime-600" />
+                      <MapPin className="h-5 w-5 text-sky-600" />
                       <h3 className="font-semibold text-gray-900">{office.city}</h3>
                     </div>
                     <div className="space-y-2 text-sm text-gray-600">
                       <p>{office.address}</p>
                       <p>{office.zipcode}</p>
                       <div className="flex items-center gap-2 pt-2">
-                        <Phone className="h-4 w-4 text-lime-600" />
+                        <Phone className="h-4 w-4 text-sky-600" />
                         <span className="font-medium">{office.phone}</span>
                       </div>
                     </div>
@@ -248,7 +236,7 @@ export default function ContactPage() {
           <div className="container max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">Ready to Get Started?</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white volkhov-regular">Ready to get started?</h2>
                 <p className="mx-auto max-w-[600px] text-lime-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Don't wait - start your free trial today and see how Dentistly can transform your practice.
                 </p>
@@ -262,7 +250,7 @@ export default function ContactPage() {
                   variant="outline"
                   className="border-white text-white hover:bg-white hover:text-lime-600 bg-transparent"
                 >
-                  Schedule Demo
+                  Schedule demo
                 </Button>
               </div>
             </div>
