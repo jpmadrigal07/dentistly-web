@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import { UnavailableTooltip } from "@/components/unavailable-tooltip"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -222,16 +223,25 @@ export default function ContactPage() {
                 </p>
               </div>
               <div className="flex flex-col gap-3 min-[400px]:flex-row">
-                <Button size="lg" variant="secondary" className="bg-white text-lime-600 hover:bg-stone-100">
-                  Start Free
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-lime-600 bg-transparent"
-                >
-                  Schedule demo
-                </Button>
+                <UnavailableTooltip>
+                  <span>
+                    <Button size="lg" variant="secondary" className="bg-white text-lime-600 hover:bg-stone-100" disabled>
+                      Start Free
+                    </Button>
+                  </span>
+                </UnavailableTooltip>
+                <UnavailableTooltip>
+                  <span>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-white text-white hover:bg-white hover:text-lime-600 bg-transparent"
+                      disabled
+                    >
+                      Schedule demo
+                    </Button>
+                  </span>
+                </UnavailableTooltip>
               </div>
             </div>
           </div>
