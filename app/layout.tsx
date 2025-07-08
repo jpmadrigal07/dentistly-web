@@ -61,6 +61,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel="icon" type="image/x-icon" href="/dentistly.png" />
       <body className="flex flex-col min-h-screen bg-white">
         <TooltipProvider>
           <Header />
