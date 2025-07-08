@@ -9,8 +9,7 @@ export default function Footer() {
     <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-stone-50">
       <div className="container max-w-7xl mx-auto flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center">
         <div className="flex items-center gap-2">
-          <Stethoscope className="h-6 w-6 text-lime-600" />
-          <span className="text-lg font-bold text-gray-900">Dentistly</span>
+          <span className="text-lg font-bold bg-gradient-to-r from-lime-600 via-lime-500 to-sky-400 bg-clip-text text-transparent young-serif-regular">Dentistly</span>
           <span className="text-sm text-gray-500">by</span>
           <Link
             href="https://zkript.dev"

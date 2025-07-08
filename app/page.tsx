@@ -33,7 +33,7 @@ export default function LandingPage() {
                     Trusted by Dental clinics
                   </div>
                   <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-gray-900 young-serif-regular">
-                    Streamline your dental practice with <span className="text-lime-600 font-bold">Dentistly</span>
+                    Streamline your dental practice in one app
                   </h1>
                   <p className="max-w-[600px] text-gray-600 md:text-xl">
                     The complete SaaS solution for managing your dental clinic. Handle appointments, patients,
