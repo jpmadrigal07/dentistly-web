@@ -22,7 +22,7 @@ export default function AboutPage() {
     },
     {
       name: "Dr. Kris Bernal",
-      role: "Head of Product",
+      role: "Head of Product & Co-Founder",
       bio: "Former practicing dentist with 15+ years of experience. Passionate about improving dental practice efficiency.",
       image: "/placeholder.svg?height=300&width=300&text=Emily+Rodriguez+Head+of+Product",
     },
@@ -53,41 +53,6 @@ export default function AboutPage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      {/* Header */}
-      <header className="px-4 lg:px-6 h-16 flex items-center border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
-        <div className="container max-w-7xl mx-auto flex items-center">
-          <Link href="/" className="flex items-center justify-center">
-            <Stethoscope className="h-8 w-8 text-lime-600" />
-            <span className="ml-2 text-2xl font-bold text-gray-900">Dentistly</span>
-          </Link>
-          <nav className="ml-auto hidden md:flex gap-6">
-            <Link href="/#features" className="text-sm font-medium text-gray-600 hover:text-lime-600 transition-colors">
-              Features
-            </Link>
-            <Link href="/pricing" className="text-sm font-medium text-gray-600 hover:text-lime-600 transition-colors">
-              Pricing
-            </Link>
-            <Link href="/about" className="text-sm font-medium text-lime-600">
-              About
-            </Link>
-            <Link href="/contact" className="text-sm font-medium text-gray-600 hover:text-lime-600 transition-colors">
-              Contact
-            </Link>
-          </nav>
-          <div className="ml-6 hidden md:flex gap-2">
-            <Button variant="ghost" size="sm">
-              Sign in
-            </Button>
-            <Button size="sm" className="bg-lime-500 hover:bg-lime-600 volkhov-regular">
-              Start Free Trial
-            </Button>
-          </div>
-          <Button variant="ghost" size="sm" className="ml-4 md:hidden">
-            <Menu className="h-5 w-5" />
-          </Button>
-        </div>
-      </header>
-
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-lime-50 to-stone-100">
@@ -95,7 +60,7 @@ export default function AboutPage() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">Our Story</div>
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-gray-900 volkhov-regular">
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-gray-900 young-serif-regular">
                   Built by Dentists, <span className="text-lime-600">for Dentists</span>
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -130,7 +95,7 @@ export default function AboutPage() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">Our Mission</div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 volkhov-regular">
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 young-serif-regular">
                     Transforming Dental practice management
                   </h2>
                   <p className="max-w-[600px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -188,7 +153,7 @@ export default function AboutPage() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">Our Values</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 volkhov-regular">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 young-serif-regular">
                   What drives us every day
                 </h2>
               </div>
@@ -215,7 +180,7 @@ export default function AboutPage() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">Meet Our Team</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 volkhov-regular">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 young-serif-regular">
                   The People behind Dentistly
                 </h2>
                 <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -254,7 +219,7 @@ export default function AboutPage() {
           <div className="container max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white volkhov-regular">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white young-serif-regular">
                   Ready to join our Community?
                 </h2>
                 <p className="mx-auto max-w-[600px] text-lime-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -277,37 +242,6 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
-
-      {/* Footer */}
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-stone-50">
-        <div className="container max-w-7xl mx-auto flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center">
-          <div className="flex items-center gap-2">
-            <Stethoscope className="h-6 w-6 text-lime-600" />
-            <span className="text-lg font-bold text-gray-900">Dentistly</span>
-            <span className="text-sm text-gray-500">by</span>
-            <Link
-              href="https://zkript.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-semibold text-lime-600 hover:text-lime-700 transition-colors"
-            >
-              Zkript
-            </Link>
-          </div>
-          <p className="text-xs text-gray-600 sm:ml-4">© 2024 Dentistly. All rights reserved.</p>
-          <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-            <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600">
-              Terms of Service
-            </Link>
-            <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600">
-              Support
-            </Link>
-          </nav>
-        </div>
-      </footer>
     </div>
   )
 }

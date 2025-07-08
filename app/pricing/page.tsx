@@ -8,11 +8,11 @@ export default function PricingPage() {
   const plans = [
     {
       name: "Starter",
-      price: 159,
+      price: 0,
       description: "Perfect for small dental practices just getting started",
       badge: null,
       features: [
-        { name: "Up to 30 patients", included: true },
+        { name: "Up to 10 patients", included: true },
         { name: "2 staff users", included: true },
         { name: "Appointment scheduling", included: true },
         { name: "Basic patient records", included: true },
@@ -25,7 +25,7 @@ export default function PricingPage() {
         { name: "Priority support", included: false },
         { name: "Dedicated account manager", included: false },
       ],
-      cta: "Start Free Trial",
+      cta: "Start Free",
       popular: false,
     },
     {
@@ -105,38 +105,6 @@ export default function PricingPage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      {/* Header */}
-      <header className="px-4 lg:px-6 h-16 flex items-center border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
-        <div className="container max-w-7xl mx-auto flex items-center">
-          <Link href="/" className="flex items-center justify-center">
-            <Stethoscope className="h-8 w-8 text-lime-600" />
-            <span className="ml-2 text-2xl font-bold text-gray-900">Dentistly</span>
-          </Link>
-          <nav className="ml-auto hidden md:flex gap-6">
-            <Link href="/#features" className="text-sm font-medium text-gray-600 hover:text-lime-600 transition-colors">
-              Features
-            </Link>
-            <Link href="/pricing" className="text-sm font-medium text-lime-600">
-              Pricing
-            </Link>
-            <Link href="/about" className="text-sm font-medium text-gray-600 hover:text-lime-600 transition-colors">
-              About
-            </Link>
-            <Link href="/contact" className="text-sm font-medium text-gray-600 hover:text-lime-600 transition-colors">
-              Contact
-            </Link>
-          </nav>
-          <div className="ml-6 hidden md:flex gap-2">
-            <Button variant="ghost" size="sm">
-              Sign In
-            </Button>
-            <Button size="sm" className="bg-lime-500 hover:bg-lime-600 volkhov-regular">
-              Start Free Trial
-            </Button>
-          </div>
-        </div>
-      </header>
-
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-lime-50 to-stone-100">
@@ -146,7 +114,7 @@ export default function PricingPage() {
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
                   Simple, Transparent Pricing
                 </div>
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-gray-900 volkhov-regular">
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-gray-900 young-serif-regular">
                   Choose the perfect plan for your <span className="text-lime-600 font-bold">Dental Practice</span>
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -188,7 +156,7 @@ export default function PricingPage() {
                     </div>
                   )}
                   <CardHeader className="text-center pb-8 pt-6">
-                    <h3 className="text-2xl font-bold text-gray-900 volkhov-regular">{plan.name}</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 young-serif-regular">{plan.name}</h3>
                     <div className="mt-4">
                       <span className="text-4xl font-bold text-gray-900">₱{plan.price}</span>
                       <span className="text-gray-600">/month</span>
@@ -236,7 +204,7 @@ export default function PricingPage() {
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
                   Why Choose Dentistly
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 volkhov-regular">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 young-serif-regular">
                   Everything You Need, Nothing You Don't
                 </h2>
               </div>
@@ -290,7 +258,7 @@ export default function PricingPage() {
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
                   Frequently asked questions
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 volkhov-regular">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 young-serif-regular">
                   Got questions? We've got answers
                 </h2>
               </div>
@@ -313,7 +281,7 @@ export default function PricingPage() {
           <div className="container max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white volkhov-regular">Ready to get started?</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white young-serif-regular">Ready to get started?</h2>
                 <p className="mx-auto max-w-[600px] text-lime-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Join hundreds of dental professionals who trust Dentistly. Start your free trial today.
                 </p>
@@ -336,37 +304,6 @@ export default function PricingPage() {
           </div>
         </section>
       </main>
-
-      {/* Footer */}
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-stone-50">
-        <div className="container max-w-7xl mx-auto flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center">
-          <div className="flex items-center gap-2">
-            <Stethoscope className="h-6 w-6 text-lime-600" />
-            <span className="text-lg font-bold text-gray-900">Dentistly</span>
-            <span className="text-sm text-gray-500">by</span>
-            <Link
-              href="https://zkript.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-semibold text-lime-600 hover:text-lime-700 transition-colors"
-            >
-              Zkript
-            </Link>
-          </div>
-          <p className="text-xs text-gray-600 sm:ml-4">© 2024 Dentistly. All rights reserved.</p>
-          <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-            <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600">
-              Terms of Service
-            </Link>
-            <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600">
-              Support
-            </Link>
-          </nav>
-        </div>
-      </footer>
     </div>
   )
 }

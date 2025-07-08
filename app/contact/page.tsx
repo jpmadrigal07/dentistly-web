@@ -42,41 +42,6 @@ export default function ContactPage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      {/* Header */}
-      <header className="px-4 lg:px-6 h-16 flex items-center border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
-        <div className="container max-w-7xl mx-auto flex items-center">
-          <Link href="/" className="flex items-center justify-center">
-            <Stethoscope className="h-8 w-8 text-lime-600" />
-            <span className="ml-2 text-2xl font-bold text-gray-900">Dentistly</span>
-          </Link>
-          <nav className="ml-auto hidden md:flex gap-6">
-            <Link href="/#features" className="text-sm font-medium text-gray-600 hover:text-lime-600 transition-colors">
-              Features
-            </Link>
-            <Link href="/pricing" className="text-sm font-medium text-gray-600 hover:text-lime-600 transition-colors">
-              Pricing
-            </Link>
-            <Link href="/about" className="text-sm font-medium text-gray-600 hover:text-lime-600 transition-colors">
-              About
-            </Link>
-            <Link href="/contact" className="text-sm font-medium text-lime-600">
-              Contact
-            </Link>
-          </nav>
-          <div className="ml-6 hidden md:flex gap-2">
-            <Button variant="ghost" size="sm">
-              Sign in
-            </Button>
-            <Button size="sm" className="bg-lime-500 hover:bg-lime-600 volkhov-regular font-bold">
-              Start Free Trial
-            </Button>
-          </div>
-          <Button variant="ghost" size="sm" className="ml-4 md:hidden">
-            <Menu className="h-5 w-5" />
-          </Button>
-        </div>
-      </header>
-
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-lime-50 to-stone-100">
@@ -84,7 +49,7 @@ export default function ContactPage() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">Get in Touch</div>
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-gray-900 volkhov-regular">
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-gray-900 young-serif-regular">
                   We're Here to <span className="text-lime-600">Help</span>
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -126,7 +91,7 @@ export default function ContactPage() {
                   <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
                     Send us a Message
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 volkhov-regular">
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 young-serif-regular">
                     Let's start a conversation
                   </h2>
                   <p className="max-w-[600px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -153,7 +118,7 @@ export default function ContactPage() {
               </div>
               <Card className="border-0 shadow-lg lg:order-last">
                 <CardHeader>
-                  <h3 className="text-xl font-semibold text-gray-900 volkhov-regular">Contact Form</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 young-serif-regular">Contact Form</h3>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid gap-4 md:grid-cols-2">
@@ -202,7 +167,7 @@ export default function ContactPage() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">Our Offices</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 volkhov-regular">Visit us in person</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 young-serif-regular">Visit us in person</h2>
                 <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   We have offices across the country to better serve our dental practice customers.
                 </p>
@@ -236,7 +201,7 @@ export default function ContactPage() {
           <div className="container max-w-7xl mx-auto px-4 lg:px-0">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white volkhov-regular">Ready to get started?</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white young-serif-regular">Ready to get started?</h2>
                 <p className="mx-auto max-w-[600px] text-lime-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Don't wait - start your free trial today and see how Dentistly can transform your practice.
                 </p>
@@ -258,36 +223,6 @@ export default function ContactPage() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-stone-50">
-        <div className="container max-w-7xl mx-auto flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center">
-          <div className="flex items-center gap-2">
-            <Stethoscope className="h-6 w-6 text-lime-600" />
-            <span className="text-lg font-bold text-gray-900">Dentistly</span>
-            <span className="text-sm text-gray-500">by</span>
-            <Link
-              href="https://zkript.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-semibold text-lime-600 hover:text-lime-700 transition-colors"
-            >
-              Zkript
-            </Link>
-          </div>
-          <p className="text-xs text-gray-600 sm:ml-4">© 2024 Dentistly. All rights reserved.</p>
-          <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-            <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600">
-              Terms of Service
-            </Link>
-            <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600">
-              Support
-            </Link>
-          </nav>
-        </div>
-      </footer>
     </div>
   )
 }

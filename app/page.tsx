@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
+import { UnavailableTooltip } from "@/components/unavailable-tooltip"
 import {
   Calendar,
   Users,
@@ -14,49 +15,14 @@ import {
   Star,
   ArrowRight,
   Menu,
+  VoicemailIcon,
 } from "lucide-react"
-import Link from "next/link"
 import Image from "next/image"
 
 export default function LandingPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-white">
-      {/* Header */}
-      <header className="px-4 lg:px-6 h-16 flex items-center border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
-        <div className="container max-w-7xl mx-auto flex items-center">
-          <Link href="/" className="flex items-center justify-center">
-            <Stethoscope className="h-8 w-8 text-lime-600" />
-            <span className="ml-2 text-2xl font-bold text-gray-900">Dentistly</span>
-          </Link>
-          <nav className="ml-auto hidden md:flex gap-6">
-            <Link href="/#features" className="text-sm font-medium text-gray-600 hover:text-lime-600 transition-colors">
-              Features
-            </Link>
-            <Link href="/pricing" className="text-sm font-medium text-gray-600 hover:text-lime-600 transition-colors">
-              Pricing
-            </Link>
-            <Link href="/about" className="text-sm font-medium text-gray-600 hover:text-lime-600 transition-colors">
-              About
-            </Link>
-            <Link href="/contact" className="text-sm font-medium text-gray-600 hover:text-lime-600 transition-colors">
-              Contact
-            </Link>
-          </nav>
-          <div className="ml-6 hidden md:flex gap-2">
-            <Button variant="ghost" size="sm">
-              Sign in
-            </Button>
-            <Button size="sm" className="bg-lime-500 hover:bg-lime-600 volkhov-regular">
-              Start Free Trial
-            </Button>
-          </div>
-          <Button variant="ghost" size="sm" className="ml-4 md:hidden">
-            <Menu className="h-5 w-5" />
-          </Button>
-        </div>
-      </header>
-
-      <main className="flex-1">
+      <div className="flex flex-col min-h-screen bg-white">
+        <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-lime-50 to-stone-100">
           <div className="container max-w-7xl mx-auto px-4 lg:px-0">
@@ -66,7 +32,7 @@ export default function LandingPage() {
                   <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
                     Trusted by 500+ Dental clinics
                   </div>
-                  <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-gray-900 volkhov-regular">
+                  <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-gray-900 young-serif-regular">
                     Streamline your dental practice with <span className="text-lime-600 font-bold">Dentistly</span>
                   </h1>
                   <p className="max-w-[600px] text-gray-600 md:text-xl">
@@ -75,13 +41,21 @@ export default function LandingPage() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-3 min-[400px]:flex-row">
-                  <Button size="lg" className="bg-lime-500 hover:bg-lime-600 text-white">
-                    Start Free Trial
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                  <Button variant="outline" size="lg">
-                    Watch demo
-                  </Button>
+                  <UnavailableTooltip>
+                    <span tabIndex={0} className="inline-block">
+                      <Button size="lg" className="bg-lime-500 hover:bg-lime-600 text-white" disabled>
+                        Start Free Trial
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </span>
+                  </UnavailableTooltip>
+                  <UnavailableTooltip>
+                    <span tabIndex={0} className="inline-block">
+                      <Button variant="outline" size="lg" disabled>
+                        Watch demo
+                      </Button>
+                    </span>
+                  </UnavailableTooltip>
                 </div>
                 <div className="flex items-center gap-4 text-sm text-gray-600">
                   <div className="flex items-center gap-1">
@@ -112,86 +86,119 @@ export default function LandingPage() {
           <div className="container max-w-7xl mx-auto px-4 lg:px-0">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
+                <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 mb-6 text-sm text-lime-800">
                   Powerful Features
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 volkhov-regular">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gray-900 young-serif-regular">
                   Everything you need to run your Dental Practice
                 </h2>
-                <p className=" text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="text-gray-600 text-base/relaxed">
                   From appointment scheduling to patient management, <span className="font-bold">Dentistly</span> provides all the tools you need to
                   operate efficiently.
                 </p>
               </div>
             </div>
             <div className="mx-auto grid max-w-7xl items-start gap-6 py-12 lg:grid-cols-3 lg:gap-8">
-              <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="flex flex-col items-center space-y-4 p-6">
+              <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
+                <CardContent className="flex flex-col items-center space-y-4 p-6 h-full">
                   <div className="rounded-full bg-sky-100 p-3">
                     <Calendar className="h-8 w-8 text-sky-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900">Appointment Management</h3>
-                  <p className="text-center text-gray-600">
+                  <h3 className="text-lg text-gray-900">Appointment Management</h3>
+                  <p className="text-center text-gray-600 text-sm">
                     Schedule, reschedule, and manage appointments with ease. Send automated reminders to reduce
                     no-shows.
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="flex flex-col items-center space-y-4 p-6">
+              <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
+                <CardContent className="flex flex-col items-center space-y-4 p-6 h-full">
                   <div className="rounded-full bg-sky-100 p-3">
                     <Users className="h-8 w-8 text-sky-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900">Patient Records</h3>
-                  <p className="text-center text-gray-600">
+                  <h3 className="text-lg text-gray-900">Patient Records</h3>
+                  <p className="text-center text-gray-600 text-sm">
                     Maintain comprehensive patient records, treatment history, and medical information securely.
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="flex flex-col items-center space-y-4 p-6">
+              <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
+                <CardContent className="flex flex-col items-center space-y-4 p-6 h-full">
                   <div className="rounded-full bg-sky-100 p-3">
                     <Building2 className="h-8 w-8 text-sky-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900">Multi-Clinic Support</h3>
-                  <p className="text-center text-gray-600">
+                  <h3 className="text-lg text-gray-900">Multi-clinic Support</h3>
+                  <p className="text-center text-gray-600 text-sm">
                     Manage multiple clinic locations from a single dashboard with centralized reporting.
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="flex flex-col items-center space-y-4 p-6">
+              <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
+                <CardContent className="flex flex-col items-center space-y-4 p-6 h-full">
                   <div className="rounded-full bg-sky-100 p-3">
                     <Stethoscope className="h-8 w-8 text-sky-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900">Procedure Tracking</h3>
-                  <p className="text-center text-gray-600">
+                  <h3 className="text-lg text-gray-900">Procedure Tracking</h3>
+                  <p className="text-center text-gray-600 text-sm">
                     Track dental procedures like cleanings, extractions, and treatments with detailed documentation.
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="flex flex-col items-center space-y-4 p-6">
+              <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
+                <CardContent className="flex flex-col items-center space-y-4 p-6 h-full">
                   <div className="rounded-full bg-sky-100 p-3">
                     <UserPlus className="h-8 w-8 text-sky-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900">Team Management</h3>
-                  <p className="text-center text-gray-600">
+                  <h3 className="text-lg text-gray-900">Team Management</h3>
+                  <p className="text-center text-gray-600 text-sm">
                     Add and manage team members with role-based access control and permissions.
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="flex flex-col items-center space-y-4 p-6">
-                  <div className="rounded-full bg-sky-100 p-3">
-                    <BarChart3 className="h-8 w-8 text-sky-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">Analytics & Reports</h3>
-                  <p className="text-center text-gray-600">
-                    Get insights into your practice performance with detailed analytics and custom reports.
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="relative group h-full">
+                <span className="absolute top-3 right-3 z-20 bg-lime-100 text-lime-700 text-xs font-semibold px-3 py-1 rounded-full shadow-sm border border-lime-200 select-none">Coming soon!</span>
+                <Card className="border-0 shadow-lg transition-shadow h-full opacity-50 pointer-events-none select-none">
+                  <CardContent className="flex flex-col items-center space-y-4 p-6 h-full">
+                    <div className="rounded-full bg-sky-100 p-3">
+                      <BarChart3 className="h-8 w-8 text-sky-600" />
+                    </div>
+                    <h3 className="text-lg text-gray-900">Analytics & Reports</h3>
+                    <p className="text-center text-gray-600 text-sm">
+                      Get insights into your practice performance with detailed analytics and custom reports.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+              {/* AI Voice Assistant (Coming Soon) */}
+              <div className="relative group h-full">
+                <span className="absolute top-3 right-3 z-20 bg-lime-100 text-lime-700 text-xs font-semibold px-3 py-1 rounded-full shadow-sm border border-lime-200 select-none">Coming soon!</span>
+                <Card className="border-0 shadow-lg transition-shadow h-full opacity-50 pointer-events-none select-none">
+                  <CardContent className="flex flex-col items-center space-y-4 p-6 h-full">
+                    <div className="rounded-full bg-sky-100 p-3">
+                      <VoicemailIcon className="h-8 w-8 text-sky-600" />
+                    </div>
+                    <h3 className="text-lg text-gray-900">AI Checkup Assistant</h3>
+                    <p className="text-center text-gray-600 text-sm">
+                      Transcribe checkup details between patient and doctor automatically, making record-keeping effortless and accurate.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+              {/* AI Appointment Assistant (Coming Soon) */}
+              <div className="relative group h-full">
+                <span className="absolute top-3 right-3 z-20 bg-lime-100 text-lime-700 text-xs font-semibold px-3 py-1 rounded-full shadow-sm border border-lime-200 select-none">Coming soon!</span>
+                <Card className="border-0 shadow-lg transition-shadow h-full opacity-50 pointer-events-none select-none">
+                  <CardContent className="flex flex-col items-center space-y-4 p-6 h-full">
+                    <div className="rounded-full bg-sky-100 p-3">
+                      <Calendar className="h-8 w-8 text-sky-600" />
+                    </div>
+                    <h3 className="text-lg text-gray-900">AI Appointment Assistant</h3>
+                    <p className="text-center text-gray-600 text-sm">
+                      Let AI handle appointment scheduling, confirmations, and reminders for your clinic automatically.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </section>
@@ -202,13 +209,13 @@ export default function LandingPage() {
             <div className="grid items-center gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
+                  <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 mb-6 text-sm text-lime-800">
                     Why choose Dentistly
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 volkhov-regular">
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gray-900 young-serif-regular">
                     Built specifically for Dental Professionals
                   </h2>
-                  <p className="max-w-[600px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  <p className="max-w-[600px] text-gray-600 text-base/relaxed">
                     We understand the unique challenges of running a dental practice. Our platform is designed with
                     dental professionals in mind.
                   </p>
@@ -259,8 +266,8 @@ export default function LandingPage() {
           <div className="container max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">Testimonials</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 volkhov-regular">
+                <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 mb-6 text-sm text-lime-800">Testimonials</div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gray-900 young-serif-regular">
                   Loved by Dental Professionals
                 </h2>
               </div>
@@ -340,7 +347,7 @@ export default function LandingPage() {
           <div className="container max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white volkhov-regular">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-white young-serif-regular">
                   Ready to transform your Dental Practice?
                 </h2>
                 <p className="mx-auto max-w-[600px] text-lime-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -349,10 +356,16 @@ export default function LandingPage() {
               </div>
               <div className="w-full max-w-sm space-y-2">
                 <form className="flex gap-2">
-                  <Input type="email" placeholder="Enter your email" className="flex-1 bg-white border-white" />
-                  <Button type="submit" variant="secondary" className="bg-white text-lime-600 hover:bg-stone-100">
-                    Start Free Trial
-                  </Button>
+                  <UnavailableTooltip>
+                    <Input type="email" placeholder="Enter your email" className="flex-1 bg-white border-white" disabled />
+                  </UnavailableTooltip>
+                  <UnavailableTooltip>
+                    <span tabIndex={0} className="inline-block">
+                      <Button type="submit" variant="secondary" className="bg-white text-lime-600 hover:bg-stone-100" disabled>
+                        Start Free Trial
+                      </Button>
+                    </span>
+                  </UnavailableTooltip>
                 </form>
                 <p className="text-xs text-lime-100">14-day free trial. No credit card required.</p>
               </div>
@@ -360,37 +373,6 @@ export default function LandingPage() {
           </div>
         </section>
       </main>
-
-      {/* Footer */}
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-stone-50">
-        <div className="container max-w-7xl mx-auto flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center">
-          <div className="flex items-center gap-2">
-            <Stethoscope className="h-6 w-6 text-lime-600" />
-            <span className="text-lg font-bold text-gray-900">Dentistly</span>
-            <span className="text-sm text-gray-500">by</span>
-            <Link
-              href="https://zkript.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-semibold text-lime-600 hover:text-lime-700 transition-colors"
-            >
-              Zkript
-            </Link>
-          </div>
-          <p className="text-xs text-gray-600 sm:ml-4">© 2024 Dentistly. All rights reserved.</p>
-          <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-            <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600">
-              Terms of Service
-            </Link>
-            <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600">
-              Support
-            </Link>
-          </nav>
-        </div>
-      </footer>
-    </div>
+      </div>
   )
 }
