@@ -14,11 +14,11 @@ export default function PrivacyPolicyPage() {
         <h2 className="text-xl font-semibold mt-8 mb-2">4. Sharing of Information</h2>
         <p className="mb-4">We do not sell or rent your personal information. We may share information with service providers as necessary to operate Dentistly, or as required by law.</p>
         <h2 className="text-xl font-semibold mt-8 mb-2">5. Your Rights</h2>
-        <p className="mb-4">You have the right to access, update, or delete your personal information. Contact us at support@dentistly.app for assistance.</p>
+        <p className="mb-4">You have the right to access, update, or delete your personal information. Contact us at contact@zkript.dev for assistance.</p>
         <h2 className="text-xl font-semibold mt-8 mb-2">6. Changes to This Policy</h2>
         <p className="mb-4">We may update this Privacy Policy from time to time. Continued use of Dentistly after changes constitutes acceptance of the new policy.</p>
         <h2 className="text-xl font-semibold mt-8 mb-2">7. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at support@dentistly.app.</p>
+        <p>If you have any questions about this Privacy Policy, please contact us at contact@zkript.dev.</p>
       </div>
     </>
   );
