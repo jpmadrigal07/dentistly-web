@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import { UnavailableTooltip } from "@/components/unavailable-tooltip"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Check, X, Stethoscope, ArrowRight, Shield, Headphones, Zap, Star } from "lucide-react"
@@ -30,7 +31,7 @@ export default function PricingPage() {
     },
     {
       name: "Professional",
-      price: 249,
+      price: 449,
       description: "Ideal for growing practices with multiple staff members",
       badge: "Most Popular",
       features: [
@@ -47,12 +48,12 @@ export default function PricingPage() {
         { name: "Priority support", included: false },
         { name: "Dedicated account manager", included: false },
       ],
-      cta: "Start Free",
+      cta: "Start 7-day Free Trial",
       popular: true,
     },
     {
       name: "Enterprise",
-      price: 499,
+      price: 899,
       description: "For large practices and multi-location dental groups",
       badge: "Best Value",
       features: [
@@ -69,7 +70,7 @@ export default function PricingPage() {
         { name: "Priority support", included: true },
         { name: "Dedicated account manager", included: true },
       ],
-      cta: "Contact Sales",
+      cta: "Start 7-day Free Trial",
       popular: false,
     },
   ]
@@ -111,14 +112,14 @@ export default function PricingPage() {
           <div className="container max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
+                <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800 mb-6">
                   Simple, Transparent Pricing
                 </div>
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-gray-900 young-serif-regular">
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl text-gray-900 young-serif-regular">
                   Choose the perfect plan for your <span className="text-lime-600 font-bold">Dental Practice</span>
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Start with our Free forever. No setup fees, no long-term contracts. Scale as your practice grows.
+                  Start with our ₱0/month plan. No setup fees, no long-term contracts. Scale as your practice grows.
                 </p>
               </div>
               <div className="flex items-center gap-4 text-sm text-gray-600">
@@ -144,53 +145,45 @@ export default function PricingPage() {
           <div className="container max-w-7xl mx-auto px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-3 lg:gap-8">
               {plans.map((plan, index) => (
-                <Card
-                  key={plan.name}
-                  className={`relative border-0 shadow-lg hover:shadow-xl transition-all duration-300 ${
-                    plan.popular ? "ring-2 ring-lime-500 scale-105" : ""
-                  }`}
-                >
-                  {plan.badge && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <Badge className="bg-lime-500 text-white px-3 py-1">{plan.badge}</Badge>
-                    </div>
-                  )}
-                  <CardHeader className="text-center pb-8 pt-6">
-                    <h3 className="text-2xl font-bold text-gray-900 young-serif-regular">{plan.name}</h3>
-                    <div className="mt-4">
-                      <span className="text-4xl font-bold text-gray-900">₱{plan.price}</span>
-                      <span className="text-gray-600">/month</span>
-                    </div>
-                    <p className="text-gray-600 mt-2">{plan.description}</p>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    <Button
-                      className={`w-full ${
-                        plan.popular
-                          ? "bg-lime-500 hover:bg-lime-600 text-white"
-                          : "bg-gray-900 hover:bg-gray-800 text-white"
-                      }`}
-                      size="lg"
-                    >
-                      {plan.cta}
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                    <div className="space-y-3">
-                      {plan.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center gap-3">
-                          {feature.included ? (
-                            <Check className="h-4 w-4 text-green-500 flex-shrink-0" />
-                          ) : (
-                            <X className="h-4 w-4 text-gray-300 flex-shrink-0" />
-                          )}
-                          <span className={`text-sm ${feature.included ? "text-gray-900" : "text-gray-400"}`}>
-                            {feature.name}
-                          </span>
+                <UnavailableTooltip key={plan.name}>
+                  <div className="relative opacity-50 pointer-events-none select-none">
+                    <Card className={`border-0 shadow-lg transition-all duration-300 ${plan.popular ? "ring-2 ring-lime-500 scale-105" : ""}`}>
+                      {plan.badge && (
+                        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                          <Badge className="bg-lime-500 text-white px-3 py-1">{plan.badge}</Badge>
                         </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
+                      )}
+                      <CardHeader className="text-center pb-8 pt-6">
+                        <h3 className="text-2xl font-bold text-gray-900 young-serif-regular">{plan.name}</h3>
+                        <div className="mt-4">
+                          <span className="text-4xl font-bold text-gray-900">₱{plan.price}</span>
+                          <span className="text-gray-600">/month</span>
+                        </div>
+                        <p className="text-gray-600 mt-2">{plan.description}</p>
+                      </CardHeader>
+                      <CardContent className="space-y-6">
+                        <Button className="w-full" size="lg" disabled>
+                          {plan.cta}
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                        <div className="space-y-3">
+                          {plan.features.map((feature, featureIndex) => (
+                            <div key={featureIndex} className="flex items-center gap-3">
+                              {feature.included ? (
+                                <Check className="h-4 w-4 text-green-500 flex-shrink-0" />
+                              ) : (
+                                <X className="h-4 w-4 text-gray-300 flex-shrink-0" />
+                              )}
+                              <span className={`text-sm ${feature.included ? "text-gray-900" : "text-gray-400"}`}>
+                                {feature.name}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </UnavailableTooltip>
               ))}
             </div>
           </div>
@@ -201,10 +194,10 @@ export default function PricingPage() {
           <div className="container max-w-7xl mx-auto px-4 lg:px-0">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
+                <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800 mb-6">
                   Why Choose Dentistly
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 young-serif-regular">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gray-900 young-serif-regular">
                   Everything You Need, Nothing You Don't
                 </h2>
               </div>
@@ -255,10 +248,10 @@ export default function PricingPage() {
           <div className="container max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
+                <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800 mb-6">
                   Frequently asked questions
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 young-serif-regular">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gray-900 young-serif-regular">
                   Got questions? We've got answers
                 </h2>
               </div>
@@ -281,23 +274,32 @@ export default function PricingPage() {
           <div className="container max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white young-serif-regular">Ready to get started?</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-white young-serif-regular">Ready to get started?</h2>
                 <p className="mx-auto max-w-[600px] text-lime-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Join hundreds of dental professionals who trust Dentistly. Start your free trial today.
                 </p>
               </div>
               <div className="flex flex-col gap-3 min-[400px]:flex-row">
-                <Button size="lg" variant="secondary" className="bg-white text-lime-600 hover:bg-stone-100">
-                  Start Free
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-lime-600 bg-transparent"
-                >
-                  Schedule demo
-                </Button>
+                <UnavailableTooltip>
+                  <span>
+                    <Button size="lg" variant="secondary" className="bg-white text-lime-600 hover:bg-stone-100" disabled>
+                      Start Free
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </span>
+                </UnavailableTooltip>
+                <UnavailableTooltip>
+                  <span>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-white text-white hover:bg-white hover:text-lime-600 bg-transparent"
+                      disabled
+                    >
+                      Schedule demo
+                    </Button>
+                  </span>
+                </UnavailableTooltip>
               </div>
               <p className="text-xs text-lime-100">Free forever • No credit card required • Cancel anytime</p>
             </div>

@@ -3,8 +3,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Stethoscope, Mail, Phone, MapPin, Clock, Send, MessageSquare, Headphones, Menu } from "lucide-react"
-import Link from "next/link"
+import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Headphones, Menu } from "lucide-react"
 
 export default function ContactPage() {
   const contactMethods = [
@@ -12,32 +11,35 @@ export default function ContactPage() {
       icon: Mail,
       title: "Email support",
       description: "Get help via email within 24 hours",
-      contact: "support@dentistly.com",
+      contact: "contact@zkript.dev",
       action: "Send email",
+      disabled: false,
     },
     {
       icon: Phone,
       title: "Phone support",
       description: "Speak with our support team",
-      contact: "1-800-DENTIST",
+      contact: "Not available now",
       action: "Call now",
+      disabled: true,
     },
     {
       icon: MessageSquare,
       title: "Live chat",
       description: "Chat with us in real-time",
-      contact: "Available 9 AM - 6 PM EST",
+      contact: "Available 9 AM - 6 PM",
       action: "Start chat",
+      disabled: true,
     },
   ]
 
   const offices = [
-    {
-      city: "Paete",
-      address: "123 Market Street, Suite 400",
-      zipcode: "4016",
-      phone: "+63 123 456 4898",
-    },
+    // {
+    //   city: "Paete",
+    //   address: "123 Market Street, Suite 400",
+    //   zipcode: "4016",
+    //   phone: "+63 123 456 4898",
+    // },
   ]
 
   return (
@@ -48,8 +50,8 @@ export default function ContactPage() {
           <div className="container max-w-7xl mx-auto px-4 lg:px-0">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">Get in Touch</div>
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-gray-900 young-serif-regular">
+                <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800 mb-6">Get in Touch</div>
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl text-gray-900 young-serif-regular">
                   We're Here to <span className="text-lime-600">Help</span>
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -65,19 +67,32 @@ export default function ContactPage() {
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container max-w-7xl mx-auto px-4 lg:px-0">
             <div className="grid gap-6 md:grid-cols-3">
-              {contactMethods.map((method, index) => (
-                <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center">
-                  <CardContent className="p-6">
-                    <div className="rounded-full bg-sky-100 p-3 w-fit mx-auto mb-4">
-                      <method.icon className="h-6 w-6 text-sky-600" />
-                    </div>
-                    <h3 className="font-semibold text-gray-900 mb-2">{method.title}</h3>
-                    <p className="text-sm text-gray-600 mb-3">{method.description}</p>
-                    <p className="font-medium text-gray-900 mb-4">{method.contact}</p>
-                    <Button className="bg-lime-500 hover:bg-lime-600 text-white">{method.action}</Button>
-                  </CardContent>
-                </Card>
-              ))}
+              {contactMethods.map((method, index) => {
+                const isDisabled = method.disabled;
+                return (
+                  <Card
+                    key={index}
+                    className={`border-0 shadow-lg transition-shadow text-center ${isDisabled ? 'opacity-50 pointer-events-none select-none' : 'hover:shadow-xl'}`}
+                    aria-disabled={isDisabled}
+                  >
+                    <CardContent className="p-6">
+                      <div className="rounded-full bg-sky-100 p-3 w-fit mx-auto mb-4">
+                        <method.icon className="h-6 w-6 text-sky-600" />
+                      </div>
+                      <h3 className="font-semibold text-gray-900 mb-2">{method.title}</h3>
+                      <p className="text-sm text-gray-600 mb-3">{method.description}</p>
+                      <p className="font-medium text-gray-900 mb-4">{method.contact}</p>
+                      {method.title === "Email support" ? (
+                        <a href={`mailto:${method.contact}`} tabIndex={isDisabled ? -1 : 0} aria-disabled={isDisabled}>
+                          <Button className="bg-lime-500 hover:bg-lime-600 text-white" disabled={isDisabled}>{method.action}</Button>
+                        </a>
+                      ) : (
+                        <Button className="bg-lime-500 hover:bg-lime-600 text-white" disabled={isDisabled}>{method.action}</Button>
+                      )}
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -88,13 +103,13 @@ export default function ContactPage() {
             <div className="grid items-start gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
+                  <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800 mb-6">
                     Send us a Message
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 young-serif-regular">
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gray-900 young-serif-regular">
                     Let's start a conversation
                   </h2>
-                  <p className="max-w-[600px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  <p className="max-w-[600px] text-gray-600 text-base/relaxed">
                     Fill out the form and we'll get back to you within 24 hours. For urgent matters, please call our
                     support line.
                   </p>
@@ -116,7 +131,7 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-              <Card className="border-0 shadow-lg lg:order-last">
+              <Card className="border-0 shadow-lg lg:order-last opacity-50 pointer-events-none select-none" aria-disabled="true">
                 <CardHeader>
                   <h3 className="text-xl font-semibold text-gray-900 young-serif-regular">Contact Form</h3>
                 </CardHeader>
@@ -124,34 +139,34 @@ export default function ContactPage() {
                   <div className="grid gap-4 md:grid-cols-2">
                     <div className="space-y-2">
                       <Label htmlFor="firstName">First Name</Label>
-                      <Input id="firstName" placeholder="Enter your first name" />
+                      <Input id="firstName" placeholder="Enter your first name" disabled />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="lastName">Last Name</Label>
-                      <Input id="lastName" placeholder="Enter your last name" />
+                      <Input id="lastName" placeholder="Enter your last name" disabled />
                     </div>
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="Enter your email" />
+                    <Input id="email" type="email" placeholder="Enter your email" disabled />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone Number</Label>
-                    <Input id="phone" type="tel" placeholder="Enter your phone number" />
+                    <Input id="phone" type="tel" placeholder="Enter your phone number" disabled />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="practice">Practice Name</Label>
-                    <Input id="practice" placeholder="Enter your practice name" />
+                    <Input id="practice" placeholder="Enter your practice name" disabled />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="subject">Subject</Label>
-                    <Input id="subject" placeholder="What can we help you with?" />
+                    <Input id="subject" placeholder="What can we help you with?" disabled />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="message">Message</Label>
-                    <Textarea id="message" placeholder="Tell us more about your needs..." className="min-h-[120px]" />
+                    <Textarea id="message" placeholder="Tell us more about your needs..." className="min-h-[120px]" disabled />
                   </div>
-                  <Button className="w-full bg-lime-500 hover:bg-lime-600 text-white">
+                  <Button className="w-full bg-lime-500 hover:bg-lime-600 text-white" disabled>
                     Send message
                     <Send className="ml-2 h-4 w-4" />
                   </Button>
@@ -166,10 +181,10 @@ export default function ContactPage() {
           <div className="container max-w-7xl mx-auto px-4 lg:px-0">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">Our Offices</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 young-serif-regular">Visit us in person</h2>
+                <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800 mb-6">Our Office</div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gray-900 young-serif-regular">Visit us in person</h2>
                 <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  We have offices across the country to better serve our dental practice customers.
+                  We have office in the country to better serve our dental practice customers.
                 </p>
               </div>
             </div>
@@ -201,7 +216,7 @@ export default function ContactPage() {
           <div className="container max-w-7xl mx-auto px-4 lg:px-0">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white young-serif-regular">Ready to get started?</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-white young-serif-regular">Ready to get started?</h2>
                 <p className="mx-auto max-w-[600px] text-lime-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Don't wait - start your free trial today and see how Dentistly can transform your practice.
                 </p>

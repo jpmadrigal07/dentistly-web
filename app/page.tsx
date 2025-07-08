@@ -30,7 +30,7 @@ export default function LandingPage() {
               <div className="flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
                   <div className="inline-block rounded-lg bg-lime-100 px-3 py-1 text-sm text-lime-800">
-                    Trusted by 500+ Dental clinics
+                    Trusted by Dental clinics
                   </div>
                   <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-gray-900 young-serif-regular">
                     Streamline your dental practice with <span className="text-lime-600 font-bold">Dentistly</span>
@@ -40,9 +40,9 @@ export default function LandingPage() {
                     procedures, and team members all in one powerful platform.
                   </p>
                 </div>
-                <div className="flex flex-col gap-3 min-[400px]:flex-row">
+                <div className="flex gap-3 flex-row">
                   <UnavailableTooltip>
-                    <span tabIndex={0} className="inline-block">
+                    <span tabIndex={0}>
                       <Button size="lg" className="bg-lime-500 hover:bg-lime-600 text-white" disabled>
                         Start Free
                         <ArrowRight className="ml-2 h-4 w-4" />
@@ -50,7 +50,7 @@ export default function LandingPage() {
                     </span>
                   </UnavailableTooltip>
                   <UnavailableTooltip>
-                    <span tabIndex={0} className="inline-block">
+                    <span tabIndex={0}>
                       <Button variant="outline" size="lg" disabled>
                         Watch demo
                       </Button>
@@ -354,8 +354,8 @@ export default function LandingPage() {
                   Join hundreds of dental professionals who trust <span className="font-bold">Dentistly</span> to manage their practice efficiently.
                 </p>
               </div>
-              <div className="w-full max-w-sm space-y-2">
-                <form className="flex gap-2">
+              <div className="w-full max-w-sm space-y-2 mx-auto flex flex-col items-center">
+                <form className="flex gap-2 justify-center w-full">
                   <UnavailableTooltip>
                     <Input type="email" placeholder="Enter your email" className="flex-1 bg-white border-white" disabled />
                   </UnavailableTooltip>
@@ -367,7 +367,7 @@ export default function LandingPage() {
                     </span>
                   </UnavailableTooltip>
                 </form>
-                <p className="text-xs text-lime-100">Free forever. No credit card required.</p>
+                <p className="text-xs text-lime-100 text-center">Free forever. No credit card required.</p>
               </div>
             </div>
           </div>

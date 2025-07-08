@@ -8,31 +8,46 @@ interface UnavailableTooltipProps {
 }
 
 export function UnavailableTooltip({ children, message = "Currently unavailable. Please check back soon!" }: UnavailableTooltipProps) {
-  const [open, setOpen] = useState(false);
   const triggerRef = useRef<HTMLSpanElement>(null);
 
-  // Close tooltip on outside click
-  useEffect(() => {
-    if (!open) return;
-    function handleClick(e: MouseEvent) {
-      if (triggerRef.current && !triggerRef.current.contains(e.target as Node)) {
-        setOpen(false);
-      }
+  // Helper to detect mobile (simple: width <= 768px)
+  const isMobile = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(max-width: 768px)").matches;
+
+  const handleClick = (e: React.MouseEvent) => {
+    if (isMobile) {
+      e.preventDefault();
+      alert(message);
     }
-    document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("mousedown", handleClick);
-  }, [open]);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (isMobile && (e.key === "Enter" || e.key === " ")) {
+      e.preventDefault();
+      alert(message);
+    }
+  };
+
+  if (isMobile) {
+    return (
+      <span
+        ref={triggerRef}
+        tabIndex={0}
+        style={{ cursor: "not-allowed" }}
+        onClick={handleClick}
+        onKeyDown={handleKeyDown}
+      >
+        {children}
+      </span>
+    );
+  }
 
   return (
-    <Tooltip open={open} onOpenChange={setOpen}>
+    <Tooltip>
       <TooltipTrigger asChild>
         <span
           ref={triggerRef}
           tabIndex={0}
-          onClick={() => setOpen(true)}
-          onKeyDown={e => {
-            if (e.key === "Enter" || e.key === " ") setOpen(true);
-          }}
+          style={{ cursor: "not-allowed" }}
         >
           {children}
         </span>
