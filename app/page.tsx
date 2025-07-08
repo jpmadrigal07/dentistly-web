@@ -19,6 +19,41 @@ import {
 } from "lucide-react"
 import Image from "next/image"
 
+export const metadata = {
+  title: 'Dentistly - Dental Practice Management SaaS',
+  description: 'Streamline your dental clinic with Dentistly. Manage appointments, patients, procedures, and your team in one powerful, easy-to-use platform.',
+  keywords: [
+    'dentist', 'dental', 'dental software', 'dental SaaS', 'dental clinic management', 'appointment scheduling', 'patient management', 'practice management', 'Dentistly', 'Philippines dentist', 'Philippines dental', 'AI dental', 'analytics', 'reports', 'healthcare software'
+  ],
+  openGraph: {
+    title: 'Dentistly - Dental Practice Management SaaS',
+    description: 'Streamline your dental clinic with Dentistly. Manage appointments, patients, procedures, and your team in one powerful, easy-to-use platform.',
+    url: 'https://dentistly.app',
+    siteName: 'Dentistly',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+        width: 2070,
+        height: 1380,
+        alt: 'Happy dental team and patients using Dentistly software',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Dentistly - Dental Practice Management SaaS',
+    description: 'Streamline your dental clinic with Dentistly. Manage appointments, patients, procedures, and your team in one powerful, easy-to-use platform.',
+    images: [
+      'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+    ],
+    site: '@dentistly',
+    creator: '@dentistly',
+  },
+  metadataBase: new URL('https://dentistly.app'),
+};
+
 export default function LandingPage() {
   return (
       <div className="flex flex-col min-h-screen bg-white">

@@ -6,6 +6,41 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Headphones, Menu } from "lucide-react"
 
+export const metadata = {
+  title: 'Contact Dentistly - Get in Touch',
+  description: 'Contact Dentistly for support, questions, or feedback. Our team is ready to help your dental practice succeed.',
+  keywords: [
+    'contact Dentistly', 'dental SaaS support', 'dental software help', 'dental clinic management', 'practice management', 'Dentistly support', 'Philippines dentist', 'Philippines dental', 'AI dental', 'analytics', 'reports', 'healthcare software'
+  ],
+  openGraph: {
+    title: 'Contact Dentistly - Get in Touch',
+    description: 'Contact Dentistly for support, questions, or feedback. Our team is ready to help your dental practice succeed.',
+    url: 'https://dentistly.app/contact',
+    siteName: 'Dentistly',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+        width: 2070,
+        height: 1380,
+        alt: 'Happy dental team and patients using Dentistly software',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Dentistly - Get in Touch',
+    description: 'Contact Dentistly for support, questions, or feedback. Our team is ready to help your dental practice succeed.',
+    images: [
+      'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+    ],
+    site: '@dentistly',
+    creator: '@dentistly',
+  },
+  metadataBase: new URL('https://dentistly.app'),
+};
+
 export default function ContactPage() {
   const contactMethods = [
     {

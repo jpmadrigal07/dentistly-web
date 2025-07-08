@@ -6,6 +6,41 @@ import { Stethoscope, Users, Target, Heart, TrendingUp, Shield, Menu } from "luc
 import Link from "next/link"
 import Image from "next/image"
 
+export const metadata = {
+  title: 'About Dentistly - Built by Dentists, for Dentists',
+  description: 'Learn about Dentistly, our mission, values, and the team behind the leading dental practice management SaaS platform.',
+  keywords: [
+    'about Dentistly', 'dental SaaS', 'dental software', 'dental clinic management', 'practice management', 'Dentistly team', 'Philippines dentist', 'Philippines dental', 'AI dental', 'analytics', 'reports', 'healthcare software'
+  ],
+  openGraph: {
+    title: 'About Dentistly - Built by Dentists, for Dentists',
+    description: 'Learn about Dentistly, our mission, values, and the team behind the leading dental practice management SaaS platform.',
+    url: 'https://dentistly.app/about',
+    siteName: 'Dentistly',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+        width: 2070,
+        height: 1380,
+        alt: 'Happy dental team and patients using Dentistly software',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Dentistly - Built by Dentists, for Dentists',
+    description: 'Learn about Dentistly, our mission, values, and the team behind the leading dental practice management SaaS platform.',
+    images: [
+      'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+    ],
+    site: '@dentistly',
+    creator: '@dentistly',
+  },
+  metadataBase: new URL('https://dentistly.app'),
+};
+
 export default function AboutPage() {
   const stats = [
     { number: "500+", label: "Dental clinics" },
