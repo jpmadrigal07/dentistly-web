@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import Header from '@/components/layout/header-1';
-import Footer from '@/components/layout/footer-1';
+import Header from '@/components/layout/header';
+import Footer from '@/components/layout/footer';
 import { TooltipProvider } from "@/components/ui/tooltip"
 
 export const metadata: Metadata = {

@@ -208,7 +208,7 @@ export default function ContactPage() {
               </div>
               <div className="flex flex-col gap-3 min-[400px]:flex-row">
                 <Button size="lg" variant="secondary" className="bg-white text-lime-600 hover:bg-stone-100">
-                  Start Free Trial
+                  Start Free
                 </Button>
                 <Button
                   size="lg"

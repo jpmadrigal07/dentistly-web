@@ -47,7 +47,7 @@ export default function PricingPage() {
         { name: "Priority support", included: false },
         { name: "Dedicated account manager", included: false },
       ],
-      cta: "Start Free Trial",
+      cta: "Start Free",
       popular: true,
     },
     {
@@ -77,7 +77,7 @@ export default function PricingPage() {
   const faqs = [
     {
       question: "Is there a free trial?",
-      answer: "Yes! We offer a 14-day free trial for all plans. No credit card required to get started.",
+      answer: "Yes! We offer a Free forever for all plans. No credit card required to get started.",
     },
     {
       question: "Can I change plans anytime?",
@@ -118,13 +118,13 @@ export default function PricingPage() {
                   Choose the perfect plan for your <span className="text-lime-600 font-bold">Dental Practice</span>
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Start with our 14-day free trial. No setup fees, no long-term contracts. Scale as your practice grows.
+                  Start with our Free forever. No setup fees, no long-term contracts. Scale as your practice grows.
                 </p>
               </div>
               <div className="flex items-center gap-4 text-sm text-gray-600">
                 <div className="flex items-center gap-1">
                   <Check className="h-4 w-4 text-green-500" />
-                  <span>14-day free trial</span>
+                  <span>Free forever</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <Check className="h-4 w-4 text-green-500" />
@@ -288,7 +288,7 @@ export default function PricingPage() {
               </div>
               <div className="flex flex-col gap-3 min-[400px]:flex-row">
                 <Button size="lg" variant="secondary" className="bg-white text-lime-600 hover:bg-stone-100">
-                  Start Free Trial
+                  Start Free
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
                 <Button
@@ -299,7 +299,7 @@ export default function PricingPage() {
                   Schedule demo
                 </Button>
               </div>
-              <p className="text-xs text-lime-100">14-day free trial • No credit card required • Cancel anytime</p>
+              <p className="text-xs text-lime-100">Free forever • No credit card required • Cancel anytime</p>
             </div>
           </div>
         </section>

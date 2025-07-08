@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Stethoscope, Menu } from "lucide-react";
 import Link from "next/link";
+import { UnavailableTooltip } from "../unavailable-tooltip";
 
 export default function Header() {
   return (
@@ -28,9 +29,13 @@ export default function Header() {
           <Button variant="ghost" size="sm">
             Sign in
           </Button>
-          <Button size="sm" className="bg-lime-500 hover:bg-lime-600 young-serif-regular">
-            Start Free Trial
-          </Button>
+          <UnavailableTooltip>
+            <span tabIndex={0} className="inline-block">
+              <Button size="sm" className="bg-lime-500 hover:bg-lime-600 young-serif-regular" disabled>
+                Start Free
+              </Button>
+            </span>
+          </UnavailableTooltip>
         </div>
         <Button variant="ghost" size="sm" className="ml-4 md:hidden">
           <Menu className="h-5 w-5" />

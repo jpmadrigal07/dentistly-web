@@ -44,7 +44,7 @@ export default function LandingPage() {
                   <UnavailableTooltip>
                     <span tabIndex={0} className="inline-block">
                       <Button size="lg" className="bg-lime-500 hover:bg-lime-600 text-white" disabled>
-                        Start Free Trial
+                        Start Free
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </span>
@@ -60,7 +60,7 @@ export default function LandingPage() {
                 <div className="flex items-center gap-4 text-sm text-gray-600">
                   <div className="flex items-center gap-1">
                     <CheckCircle className="h-4 w-4 text-green-500" />
-                    <span>14-day free trial</span>
+                    <span>Free forever</span>
                   </div>
                   <div className="flex items-center gap-1">
                     <CheckCircle className="h-4 w-4 text-green-500" />
@@ -362,12 +362,12 @@ export default function LandingPage() {
                   <UnavailableTooltip>
                     <span tabIndex={0} className="inline-block">
                       <Button type="submit" variant="secondary" className="bg-white text-lime-600 hover:bg-stone-100" disabled>
-                        Start Free Trial
+                        Start Free
                       </Button>
                     </span>
                   </UnavailableTooltip>
                 </form>
-                <p className="text-xs text-lime-100">14-day free trial. No credit card required.</p>
+                <p className="text-xs text-lime-100">Free forever. No credit card required.</p>
               </div>
             </div>
           </div>
