@@ -32,7 +32,7 @@ export default function Header() {
           ))}
         </nav>
         <div className="ml-6 hidden md:flex gap-2">
-          <Link href={`${process.env.NEXT_PUBLIC_ACCOUNT_URL}/login`} target="_blank" rel="noopener noreferrer">
+          <Link href={`${process.env.NEXT_PUBLIC_ACCOUNT_URL}/dashboard`} target="_blank" rel="noopener noreferrer">
             <Button variant="ghost" size="sm">
               Sign in
             </Button>
