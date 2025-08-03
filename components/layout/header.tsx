@@ -32,11 +32,11 @@ export default function Header() {
           ))}
         </nav>
         <div className="ml-6 hidden md:flex gap-2">
-          <UnavailableTooltip>
-            <Button variant="ghost" size="sm" disabled>
+          <Link href={`${process.env.NEXT_PUBLIC_ACCOUNT_URL}/login`} target="_blank" rel="noopener noreferrer">
+            <Button variant="ghost" size="sm">
               Sign in
             </Button>
-          </UnavailableTooltip>
+          </Link>
           <UnavailableTooltip>
             <span tabIndex={0} className="inline-block">
               <Button size="sm" className="bg-lime-500 hover:bg-lime-600 young-serif-regular" disabled>
@@ -64,7 +64,9 @@ export default function Header() {
                   </Link>
                 ))}
                 <div className="border-t my-2" />
-                <Button variant="ghost" size="sm" className="w-full justify-start px-4">Sign in</Button>
+                <Link href="https://account.dentistly.app/login" target="_blank" rel="noopener noreferrer">
+                  <Button variant="ghost" size="sm" className="w-full justify-start px-4">Sign in</Button>
+                </Link>
                 <UnavailableTooltip>
                   <span tabIndex={0} className="inline-block w-full px-4 pt-2 pb-1">
                     <Button size="sm" className="bg-lime-500 hover:bg-lime-600 young-serif-regular w-full" disabled>
