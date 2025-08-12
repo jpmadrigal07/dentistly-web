@@ -73,7 +73,7 @@ export default function AboutPage() {
     {
       icon: Shield,
       title: "Security first",
-      description: "HIPAA compliance and data security are built into every feature we create.",
+      description: "DPA compliance and data security are built into every feature we create.",
     },
     {
       icon: Users,

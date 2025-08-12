@@ -16,6 +16,7 @@ import {
   ArrowRight,
   Menu,
   VoicemailIcon,
+  LucideMessageSquareText,
 } from "lucide-react"
 import Image from "next/image"
 
@@ -160,6 +161,17 @@ export default function LandingPage() {
               <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
                 <CardContent className="flex flex-col items-center space-y-4 p-6 h-full">
                   <div className="rounded-full bg-sky-100 p-3">
+                    <LucideMessageSquareText className="h-8 w-8 text-sky-600" />
+                  </div>
+                  <h3 className="text-lg text-gray-900">Dental Record Chart</h3>
+                  <p className="text-center text-gray-600 text-sm">
+                    Visualize and manage patient odontogram charts, including treatments, notes, and images.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
+                <CardContent className="flex flex-col items-center space-y-4 p-6 h-full">
+                  <div className="rounded-full bg-sky-100 p-3">
                     <Building2 className="h-8 w-8 text-sky-600" />
                   </div>
                   <h3 className="text-lg text-gray-900">Multi-clinic Support</h3>
@@ -259,7 +271,7 @@ export default function LandingPage() {
                   <li className="flex items-start gap-3">
                     <Shield className="h-5 w-5 text-sky-600 mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-gray-900">HIPAA compliant</h4>
+                      <h4 className="font-semibold text-gray-900">DPA compliant</h4>
                       <p className="text-gray-600">
                         Your patient data is secure and compliant with healthcare regulations.
                       </p>

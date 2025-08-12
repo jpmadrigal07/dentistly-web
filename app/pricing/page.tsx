@@ -121,7 +121,7 @@ export default function PricingPage() {
     },
     {
       question: "Is my patient data secure?",
-      answer: "Yes, we're fully HIPAA compliant and use enterprise-grade security to protect all patient information.",
+      answer: "Yes, we're fully DPA compliant and use enterprise-grade security to protect all patient information.",
     },
     {
       question: "Do you offer training?",
@@ -243,7 +243,7 @@ export default function PricingPage() {
                   <div className="rounded-full bg-sky-100 p-3 w-fit mx-auto mb-4">
                     <Shield className="h-6 w-6 text-sky-600" />
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">HIPAA Compliant</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">DPA Compliant</h3>
                   <p className="text-sm text-gray-600">Enterprise-grade security for all patient data</p>
                 </CardContent>
               </Card>
