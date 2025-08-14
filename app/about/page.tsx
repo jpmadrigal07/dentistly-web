@@ -52,7 +52,7 @@ export default function AboutPage() {
   const team = [
     {
       name: "John Patrick Madrigal",
-      role: "Wizard",
+      role: "Chief Wizard",
     bio: "He doesn't do magic, but he works wonders with code and a little bit on Marketing, Sales and Business. As an all-around person in charge at the company, he added 'Wizard' to his title to show that titles don't matter—what truly matters is the value brought to the company and, most importantly, to the customers.",
       image: "/jp-image.jpg",
     },
