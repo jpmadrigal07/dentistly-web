@@ -52,9 +52,15 @@ export default function AboutPage() {
   const team = [
     {
       name: "John Patrick Madrigal",
-      role: "CEO & Co-Founder",
-      bio: "Lead software engineer with 10+ years of experience in creating software that helps thousands of people.",
+      role: "Wizard",
+    bio: "He doesn't do magic, but he works wonders with code and a little bit on Marketing, Sales and Business. As an all-around person in charge at the company, he added 'Wizard' to his title to show that titles don't matter—what truly matters is the value brought to the company and, most importantly, to the customers.",
       image: "/jp-image.jpg",
+    },
+        {
+      name: "Dr. Harieth Miguel, DMD",
+      role: "Dental Subject Matter Expert",
+      bio: "She has an extensive experience in the dental field, with a focus on patient care and practice management. She worked in the Middle East for 20+ years and is proficient in aspects of automation and digital transformation in dentistry. She established dental clinics in the Philippines focusing on Dental and Aesthetic.",
+      image: "/placeholder.svg",
     },
     // {
     //   name: "Dr. Kris Bernal",
@@ -226,7 +232,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="grid gap-6 md:grid-cols-1 max-w-sm mx-auto">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 max-w-3xl mx-auto">
               {team.map((member, index) => (
                 <Card key={index} className="border-0 shadow-lg">
                   <CardContent className="p-6 text-center">
