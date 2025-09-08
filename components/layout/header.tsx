@@ -32,11 +32,13 @@ export default function Header() {
           ))}
         </nav>
         <div className="ml-6 hidden md:flex gap-2">
-          <Link href={`${process.env.NEXT_PUBLIC_ACCOUNT_URL}/dashboard`} target="_blank" rel="noopener noreferrer">
-            <Button variant="ghost" size="sm">
+          {/* <Link href={`${process.env.NEXT_PUBLIC_ACCOUNT_URL}/dashboard`} target="_blank" rel="noopener noreferrer"> */}
+          <UnavailableTooltip>
+            <Button variant="ghost" size="sm" disabled>
               Sign in
             </Button>
-          </Link>
+          </UnavailableTooltip>
+          {/* </Link> */}
           <UnavailableTooltip>
             <span tabIndex={0} className="inline-block">
               <Button size="sm" className="bg-lime-500 hover:bg-lime-600 young-serif-regular" disabled>
