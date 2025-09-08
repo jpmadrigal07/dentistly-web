@@ -66,9 +66,11 @@ export default function Header() {
                   </Link>
                 ))}
                 <div className="border-t my-2" />
-                <Link href="https://account.dentistly.app/login" target="_blank" rel="noopener noreferrer">
-                  <Button variant="ghost" size="sm" className="w-full justify-start px-4">Sign in</Button>
-                </Link>
+                {/* <Link href="https://account.dentistly.app/login" target="_blank" rel="noopener noreferrer"> */}
+                <UnavailableTooltip>
+                  <Button variant="ghost" size="sm" className="w-full justify-start px-4" disabled>Sign in</Button>
+                </UnavailableTooltip>
+                {/* </Link> */}
                 <UnavailableTooltip>
                   <span tabIndex={0} className="inline-block w-full px-4 pt-2 pb-1">
                     <Button size="sm" className="bg-lime-500 hover:bg-lime-600 young-serif-regular w-full" disabled>
