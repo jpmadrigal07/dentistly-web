@@ -180,7 +180,7 @@ export default function PricingPage() {
           <div className="container max-w-7xl mx-auto px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-3 lg:gap-8">
               {plans.map((plan, index) => (
-                <UnavailableTooltip key={plan.name}>
+                <UnavailableTooltip message="All features are free right now. Please create an account." key={plan.name}>
                   <div className="relative opacity-50 pointer-events-none select-none">
                     <Card className={`border-0 shadow-lg transition-all duration-300 ${plan.popular ? "ring-2 ring-lime-500 scale-105" : ""}`}>
                       {plan.badge && (
@@ -315,14 +315,12 @@ export default function PricingPage() {
                 </p>
               </div>
               <div className="flex flex-col gap-3 min-[400px]:flex-row">
-                <UnavailableTooltip>
-                  <span>
-                    <Button size="lg" variant="secondary" className="bg-white text-lime-600 hover:bg-stone-100" disabled>
-                      Start Free
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </span>
-                </UnavailableTooltip>
+                <Link href={`${process.env.NEXT_PUBLIC_ACCOUNT_URL}/dashboard`} target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" variant="secondary" className="bg-white text-lime-600 hover:bg-stone-100">
+                    Start Free
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+               </Link>
                 <UnavailableTooltip>
                   <span>
                     <Button

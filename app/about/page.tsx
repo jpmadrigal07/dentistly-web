@@ -271,13 +271,13 @@ export default function AboutPage() {
               </div>
               <div className="flex flex-col gap-3 min-[400px]:flex-row">
                 {/* Start Free button disabled with UnavailableTooltip */}
-                <UnavailableTooltip>
+                <Link href={`${process.env.NEXT_PUBLIC_ACCOUNT_URL}/dashboard`} target="_blank" rel="noopener noreferrer">
                   <span>
-                    <Button size="lg" variant="secondary" className="bg-white text-lime-600 hover:bg-stone-100" disabled>
+                    <Button size="lg" variant="secondary" className="bg-white text-lime-600 hover:bg-stone-100">
                       Start Free
                     </Button>
                   </span>
-                </UnavailableTooltip>
+                </Link>
                 {/* Contact us button as Next.js Link, design preserved */}
                 <Link href="/contact" passHref legacyBehavior>
                   <Button

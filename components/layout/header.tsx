@@ -32,20 +32,16 @@ export default function Header() {
           ))}
         </nav>
         <div className="ml-6 hidden md:flex gap-2">
-          {/* <Link href={`${process.env.NEXT_PUBLIC_ACCOUNT_URL}/dashboard`} target="_blank" rel="noopener noreferrer"> */}
-          <UnavailableTooltip>
-            <Button variant="ghost" size="sm" disabled>
+          <Link href={`${process.env.NEXT_PUBLIC_ACCOUNT_URL}/dashboard`} target="_blank" rel="noopener noreferrer">
+            <Button variant="ghost" size="sm">
               Sign in
             </Button>
-          </UnavailableTooltip>
-          {/* </Link> */}
-          <UnavailableTooltip>
-            <span tabIndex={0} className="inline-block">
-              <Button size="sm" className="bg-lime-500 hover:bg-lime-600 young-serif-regular" disabled>
-                Start Free
-              </Button>
-            </span>
-          </UnavailableTooltip>
+          </Link>
+          <Link href={`${process.env.NEXT_PUBLIC_ACCOUNT_URL}/create-account`} target="_blank" rel="noopener noreferrer">
+            <Button size="sm" className="bg-lime-500 hover:bg-lime-600 young-serif-regular">
+              Start Free
+            </Button>
+          </Link>
         </div>
         {/* Mobile nav menu - moved to rightmost */}
         <div className="absolute right-4 top-0 h-16 flex items-center md:hidden">

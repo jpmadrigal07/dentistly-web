@@ -19,6 +19,7 @@ import {
   LucideMessageSquareText,
 } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export const metadata = {
   title: 'Dentistly - Dental Practice Management SaaS',
@@ -77,14 +78,12 @@ export default function LandingPage() {
                   </p>
                 </div>
                 <div className="flex gap-3 flex-row">
-                  <UnavailableTooltip>
-                    <span tabIndex={0}>
-                      <Button size="lg" className="bg-lime-500 hover:bg-lime-600 text-white" disabled>
-                        Start Free
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </span>
-                  </UnavailableTooltip>
+                  <Link href={`${process.env.NEXT_PUBLIC_ACCOUNT_URL}/dashboard`} target="_blank" rel="noopener noreferrer">
+                    <Button size="lg" className="bg-lime-500 hover:bg-lime-600 text-white">
+                      Start Free
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                   <UnavailableTooltip>
                     <span tabIndex={0}>
                       <Button variant="outline" size="lg" disabled>

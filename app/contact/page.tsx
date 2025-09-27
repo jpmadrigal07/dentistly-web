@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Headphones, Menu } from "lucide-react"
+import Link from "next/link"
 
 export const metadata = {
   title: 'Contact Dentistly - Get in Touch',
@@ -69,7 +70,7 @@ export default function ContactPage() {
     },
   ]
 
-  const offices = [
+  const offices: any = [
     // {
     //   city: "Paete",
     //   address: "123 Market Street, Suite 400",
@@ -225,7 +226,7 @@ export default function ContactPage() {
               </div>
             </div>
             <div className="grid gap-6 grid-cols-1 max-w-xl mx-auto">
-              {offices.map((office, index) => (
+              {offices.map((office: any, index: number) => (
                 <Card key={index} className="border-0 shadow-lg">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-2 mb-4">
@@ -258,13 +259,11 @@ export default function ContactPage() {
                 </p>
               </div>
               <div className="flex flex-col gap-3 min-[400px]:flex-row">
-                <UnavailableTooltip>
-                  <span>
-                    <Button size="lg" variant="secondary" className="bg-white text-lime-600 hover:bg-stone-100" disabled>
-                      Start Free
-                    </Button>
-                  </span>
-                </UnavailableTooltip>
+                <Link href={`${process.env.NEXT_PUBLIC_ACCOUNT_URL}/dashboard`} target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" variant="secondary" className="bg-white text-lime-600 hover:bg-stone-100">
+                    Start Free
+                  </Button>
+                </Link>
                 <UnavailableTooltip>
                   <span>
                     <Button
