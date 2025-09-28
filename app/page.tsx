@@ -84,13 +84,11 @@ export default function LandingPage() {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
-                  <UnavailableTooltip>
-                    <span tabIndex={0}>
-                      <Button variant="outline" size="lg" disabled>
+                  <Link href={`https://www.youtube.com/watch?v=RTscPgcKwOI&list=PL4GUrd1JgvDvFn0Ww0Xx8lIScuyfqwVvq`} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="lg">
                         Watch demo
                       </Button>
-                    </span>
-                  </UnavailableTooltip>
+                  </Link>
                 </div>
                 <div className="flex items-center gap-4 text-sm text-gray-600">
                   <div className="flex items-center gap-1">

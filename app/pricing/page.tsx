@@ -321,18 +321,15 @@ export default function PricingPage() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                </Link>
-                <UnavailableTooltip>
-                  <span>
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="border-white text-white hover:bg-white hover:text-lime-600 bg-transparent"
-                      disabled
-                    >
-                      Schedule demo
-                    </Button>
-                  </span>
-                </UnavailableTooltip>
+                <a href="mailto:john@zkript.dev?subject=Dentistly Demo Appointment">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-white text-white hover:bg-white hover:text-lime-600 bg-transparent"
+                  >
+                    Schedule demo
+                  </Button>
+                </a>
               </div>
               <p className="text-xs text-lime-100">Free forever • No credit card required • Cancel anytime</p>
             </div>

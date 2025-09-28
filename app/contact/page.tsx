@@ -48,7 +48,7 @@ export default function ContactPage() {
       icon: Mail,
       title: "Email support",
       description: "Get help via email within 24 hours",
-      contact: "contact@zkript.dev",
+      contact: "john@zkript.dev",
       action: "Send email",
       disabled: false,
     },
@@ -264,18 +264,15 @@ export default function ContactPage() {
                     Start Free
                   </Button>
                 </Link>
-                <UnavailableTooltip>
-                  <span>
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="border-white text-white hover:bg-white hover:text-lime-600 bg-transparent"
-                      disabled
-                    >
-                      Schedule demo
-                    </Button>
-                  </span>
-                </UnavailableTooltip>
+                <a href="mailto:john@zkript.dev?subject=Dentistly Demo Appointment">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-white text-white hover:bg-white hover:text-lime-600 bg-transparent"
+                  >
+                    Schedule demo
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

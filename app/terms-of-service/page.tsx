@@ -53,7 +53,7 @@ export default function TermsOfServicePage() {
         <h2 className="text-xl font-semibold mt-8 mb-2">6. Changes to Terms</h2>
         <p className="mb-4">We may update these Terms from time to time. Continued use of Dentistly after changes constitutes acceptance of the new Terms.</p>
         <h2 className="text-xl font-semibold mt-8 mb-2">7. Contact Us</h2>
-        <p>If you have any questions about these Terms, please contact us at contact@zkript.dev.</p>
+        <p>If you have any questions about these Terms, please contact us at john@zkript.dev.</p>
       </div>
     </>
   );

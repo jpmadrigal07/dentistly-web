@@ -1,5 +1,5 @@
 
-import { Stethoscope } from "lucide-react";
+import { Stethoscope, Facebook, Youtube, Linkedin } from "lucide-react";
 import Link from "next/link";
 
 const currentYear = new Date().getFullYear();
@@ -21,7 +21,36 @@ export default function Footer() {
           </Link>
         </div>
         <p className="text-xs text-gray-600 sm:ml-4">© {currentYear} Dentistly. All rights reserved.</p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
+        <nav className="sm:ml-auto flex gap-4 sm:gap-6 items-center">
+          <div className="flex gap-6 mr-4">
+            <Link
+              href="https://www.facebook.com/dentistly.official"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-lime-600 transition-colors"
+              aria-label="Follow us on Facebook"
+            >
+              <Facebook size={18} />
+            </Link>
+            <Link
+              href="https://www.youtube.com/@dentistly-official"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-lime-600 transition-colors"
+              aria-label="Subscribe to our YouTube channel"
+            >
+              <Youtube size={18} />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/company/dentistly"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-lime-600 transition-colors"
+              aria-label="Connect with us on LinkedIn"
+            >
+              <Linkedin size={18} />
+            </Link>
+          </div>
           <Link href="/terms-of-service" className="text-xs hover:underline underline-offset-4 text-gray-600">
             Terms of Service
           </Link>
